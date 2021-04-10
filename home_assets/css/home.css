@@ -1,0 +1,398 @@
+.verdana {
+	font-family: 'Verdana';
+}
+@font-face {
+	font-family:'Ubuntu Habbo';
+	src:url(https://images.habbo.com/habbo-web/america/pt/assets/fonts/UbuntuHabbo.2f484259.woff2) format("woff2"),
+	url(https://images.habbo.com/habbo-web/america/pt/assets/fonts/UbuntuHabbo.2af43356.woff) format("woff");
+	unicode-range:U+007C,U+2020,U+2022,U+00B6,U+00B1,U+00A5,U+00B5,U+00AA,U+00BA,U+00AC,U+0192,U+00BB,U+2014,U+2018,U+2021
+}
+.ubunto_habbo {
+	font-family:'Ubuntu Habbo';
+}
+body::-webkit-scrollbar {
+	width: 3px;
+}
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #FFF; 
+	border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #BCBCB7; 
+	border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background: #BCBCB7; 
+}
+.break_word {
+	word-break: break-all;
+}
+.home-card-header {
+	background:#FFF;
+}
+.card-home-body {
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+.habbo-button {
+	border: none;
+	padding: 0;
+	outline: 0;
+	border-radius: 3px;
+	padding:2px 8px !important;
+	color: #FFF;
+	min-height:25px !important;
+	height:25px !important;
+	text-decoration:none;
+	color:#FFF;
+	cursor:pointer;
+}
+.habbo-button:hover {
+	color:#FFF;
+}
+.habbo-button span {
+	font-size:13px;
+	font-weight:bold;
+	position: relative;
+	top: -2px;
+	font-family:'Verdana';
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color:inherit;
+}
+.button-habbo-green {
+	background: url(home_assets/images/green-btn/1.png) no-repeat,
+	url(home_assets/images/green-btn/2.png) no-repeat right top,
+	url(home_assets/images/green-btn/3.png) no-repeat left bottom,
+	url(home_assets/images/green-btn/4.png) no-repeat right bottom,
+	url(home_assets/images/green-btn/5.png) repeat-x,
+	url(home_assets/images/green-btn/6.png) repeat-y,
+	url(home_assets/images/green-btn/7.png) repeat-y right,
+	url(home_assets/images/green-btn/8.png) repeat-x bottom,
+	url(home_assets/images/green-btn/mid.png) #2C7E00;
+}
+.button-habbo-green:hover {
+	background: url(home_assets/images/light-green-btn/1.png) no-repeat,
+	url(home_assets/images/light-green-btn/2.png) no-repeat right top,
+	url(home_assets/images/light-green-btn/3.png) no-repeat left bottom,
+	url(home_assets/images/light-green-btn/4.png) no-repeat right bottom,
+	url(home_assets/images/light-green-btn/5.png) repeat-x,
+	url(home_assets/images/light-green-btn/6.png) repeat-y,
+	url(home_assets/images/light-green-btn/7.png) repeat-y right,
+	url(home_assets/images/light-green-btn/8.png) repeat-x bottom,
+	url(home_assets/images/light-green-btn/mid.png) #2C7E00;
+}
+.button-habbo-red {
+	background: url(home_assets/images/red-btn/1.png) no-repeat,
+	url(home_assets/images/red-btn/2.png) no-repeat right top,
+	url(home_assets/images/red-btn/3.png) no-repeat left bottom,
+	url(home_assets/images/red-btn/4.png) no-repeat right bottom,
+	url(home_assets/images/red-btn/5.png) repeat-x,
+	url(home_assets/images/red-btn/6.png) repeat-y,
+	url(home_assets/images/red-btn/7.png) repeat-y right,
+	url(home_assets/images/red-btn/8.png) repeat-x bottom,
+	url(home_assets/images/red-btn/mid.png) #D70000;
+}
+.button-habbo-red:hover {
+	background: url(home_assets/images/light-red-btn/1.png) no-repeat,
+	url(home_assets/images/light-red-btn/2.png) no-repeat right top,
+	url(home_assets/images/light-red-btn/3.png) no-repeat left bottom,
+	url(home_assets/images/light-red-btn/4.png) no-repeat right bottom,
+	url(home_assets/images/light-red-btn/5.png) repeat-x,
+	url(home_assets/images/light-red-btn/6.png) repeat-y,
+	url(home_assets/images/light-red-btn/7.png) repeat-y right,
+	url(home_assets/images/light-red-btn/8.png) repeat-x bottom,
+	url(home_assets/images/light-red-btn/mid.png) #D70000;
+}
+.button-habbo-grey {
+	background: url(home_assets/images/grey-btn/1.png) no-repeat,
+	url(home_assets/images/grey-btn/2.png) no-repeat right top,
+	url(home_assets/images/grey-btn/3.png) no-repeat left bottom,
+	url(home_assets/images/grey-btn/4.png) no-repeat right bottom,
+	url(home_assets/images/grey-btn/5.png) repeat-x,
+	url(home_assets/images/grey-btn/6.png) repeat-y,
+	url(home_assets/images/grey-btn/7.png) repeat-y right,
+	url(home_assets/images/grey-btn/8.png) repeat-x bottom,
+	url(home_assets/images/grey-btn/mid.png) #888888;
+}
+.button-habbo-grey:hover {
+	background: url(home_assets/images/light-grey-btn/1.png) no-repeat,
+	url(home_assets/images/light-grey-btn/2.png) no-repeat right top,
+	url(home_assets/images/light-grey-btn/3.png) no-repeat left bottom,
+	url(home_assets/images/light-grey-btn/4.png) no-repeat right bottom,
+	url(home_assets/images/light-grey-btn/5.png) repeat-x,
+	url(home_assets/images/light-grey-btn/6.png) repeat-y,
+	url(home_assets/images/light-grey-btn/7.png) repeat-y right,
+	url(home_assets/images/light-grey-btn/8.png) repeat-x bottom,
+	url(home_assets/images/light-grey-btn/mid.png) #888888;
+}
+.button-habbo-white {
+	background: url(home_assets/images/white-btn/1.png) no-repeat,
+	url(home_assets/images/white-btn/2.png) no-repeat right top,
+	url(home_assets/images/white-btn/3.png) no-repeat left bottom,
+	url(home_assets/images/white-btn/4.png) no-repeat right bottom,
+	url(home_assets/images/white-btn/5.png) repeat-x,
+	url(home_assets/images/white-btn/6.png) repeat-y,
+	url(home_assets/images/white-btn/7.png) repeat-y right,
+	url(home_assets/images/white-btn/8.png) repeat-x bottom,
+	url(home_assets/images/white-btn/mid.png) #EAEAEA;
+	color:#000 !important;
+}
+.button-habbo-white:hover {
+	background: url(home_assets/images/white2-btn/1.png) no-repeat,
+	url(home_assets/images/white2-btn/2.png) no-repeat right top,
+	url(home_assets/images/white2-btn/3.png) no-repeat left bottom,
+	url(home_assets/images/white2-btn/4.png) no-repeat right bottom,
+	url(home_assets/images/white2-btn/5.png) repeat-x,
+	url(home_assets/images/white2-btn/6.png) repeat-y,
+	url(home_assets/images/white2-btn/7.png) repeat-y right,
+	url(home_assets/images/white2-btn/8.png) repeat-x bottom,
+	url(home_assets/images/white2-btn/mid.png) #EAEAEA;
+	color:#000 !important;
+}
+.box-body {
+	background: url(home_assets/images/box-error/1.png) no-repeat,
+	url(home_assets/images/box-error/2.png) no-repeat right top,
+	url(home_assets/images/box-error/3.png) no-repeat left bottom,
+	url(home_assets/images/box-error/4.png) no-repeat right bottom,
+	url(home_assets/images/box-error/5.png) repeat-x,
+	url(home_assets/images/box-error/6.png) repeat-y,
+	url(home_assets/images/box-error/7.png) repeat-y right,
+	url(home_assets/images/box-error/8.png) repeat-x bottom,
+	#FFFFFF;
+	color:#000;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+}
+.box-erro {
+	padding:10px;
+	color:#000;
+}
+.box-mensagem {
+	border-radius:6px;
+	padding:5px;
+	font-family:'Verdana' !important;
+	color:#FFF !important;
+}
+.box-mensagem h5 {
+	margin:0;
+}
+.box-mensagem-erro {
+	background:#D64242 !important;
+}
+.emblema {
+	width:14px;
+	height:14px;
+	margin-left:calc((100% - 14px)/2);
+	margin-top: 2px;
+	position:absolute;
+}
+.wrapper-medalhas {
+	margin:10px 0px;
+}
+.lista_p {
+	border-radius:0 !important;
+}
+.box_home {
+	min-height:242px;
+	border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+}
+.padding_box {
+	padding-bottom:10px;
+}
+.caixa_emblemas {
+	max-height:242px;
+}
+h5 {
+	font-size: 1.10rem !important;
+}
+.wrapper_emblemas {
+	min-height:200px;
+}
+.negrito {
+	font-weight:bold;
+}
+.wrapper_depo {
+	height:162px;
+	min-height:162px;
+	max-height: 162px !important;
+}
+.wrapper_depo2 {
+	height:200px;
+	min-height:200px;
+	max-height: 200px !important;
+}
+.reset-button {
+	border:none !important;
+	padding:0 !important;
+	background:none !important;
+	outline: 0 !important;
+}
+.depoimento_inserir_wrapper {
+	margin:5px;
+}
+.depoimento_input {
+	border-top-right-radius:.25rem !important;
+	border-bottom-right-radius:.25rem !important;
+	width:80%;
+}
+.group-text-depoimento {
+	border:none !important;
+	background: none !important;
+}
+
+/* Temas */
+/* Tema Padrão */
+.tema_background_verde_oliva {
+	background:url(../images/bg/bg_pattern_green_exbr.png), #3F5D1F;
+}
+.gradient_exbr {
+	background: linear-gradient(to bottom, rgb(55, 85, 29) 0%,#293d1e 100%);
+}
+.custom-scroll-exbr::-webkit-scrollbar {
+	width: 3px;
+}
+.custom-scroll-exbr::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #FFF; 
+	border-radius: 10px;
+}
+.custom-scroll-exbr::-webkit-scrollbar-thumb {
+	background: #33691E; 
+	border-radius: 10px;
+}
+.custom-scroll-exbr::-webkit-scrollbar-thumb:hover {
+	background: #28680E; 
+}
+.text-branco-verdana {
+	font-size:11px;
+	color:#FFF;
+}
+.text-preto-verdana {
+	font-size:11px;
+	color:#000;
+}
+.home_link_exbr {
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+}
+.home_link_exbr:hover {
+	color:#000;
+}
+
+/* Tema de Espaço */
+.tema_background_space {
+	background:url(https://exbrhbofc.net/arquivos/2021/02/bg_pattern_space.gif), #005C89;
+}
+.gradient_space {
+	background: linear-gradient(to bottom, rgb(0,102,153) 0%,#005177 100%);
+}
+.custom-scroll-space::-webkit-scrollbar {
+	width: 3px;
+}
+.custom-scroll-space::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #FFF; 
+	border-radius: 10px;
+}
+.custom-scroll-space::-webkit-scrollbar-thumb {
+	background: #044F72; 
+	border-radius: 10px;
+}
+.custom-scroll-space::-webkit-scrollbar-thumb:hover {
+	background: #044F72; 
+}
+.text-verdana_space {
+	font-size:11px;
+	color:#FFF;
+}
+.text-verdana_space2 {
+	font-size:11px;
+	color:#000;
+}
+.home_link_space {
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+}
+.home_link_space:hover {
+	color:#000;
+}
+
+/* Tema Estrelado */
+.tema_background_estrelado {
+	background:url(https://exbrhbofc.net/arquivos/2021/02/xmas_bgpattern_starsky.gif), #071C49;
+}
+.gradient_estrelado {
+	background: linear-gradient(to bottom, rgb(24,55,165) 0%,#112477 100%);
+}
+.custom-scroll-estrelado::-webkit-scrollbar {
+	width: 3px;
+}
+.custom-scroll-estrelado::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #FFF; 
+	border-radius: 10px;
+}
+.custom-scroll-estrelado::-webkit-scrollbar-thumb {
+	background: #044F72; 
+	border-radius: 10px;
+}
+.custom-scroll-estrelado::-webkit-scrollbar-thumb:hover {
+	background: #044F72; 
+}
+.text-verdana_estrelado {
+	font-size:11px;
+	color:#FFF;
+}
+.text-verdana_estrelado2 {
+	font-size:11px;
+	color:#000;
+}
+.home_link_estrelado {
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+}
+
+/* Tema Shockwave */
+.tema_background_shockwave {
+	background:url(imagens/loading_1920x1080.png), #1D394E;
+}
+.gradient_shockwave {
+	background: linear-gradient(to bottom, #053A5E 0%,#1C425B 100%);
+}
+.custom-scroll-shockwave::-webkit-scrollbar {
+	width: 3px;
+}
+.custom-scroll-shockwave::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #FFF; 
+	border-radius: 10px;
+}
+.custom-scroll-shockwave::-webkit-scrollbar-thumb {
+	background: #0A2A3F; 
+	border-radius: 10px;
+}
+.custom-scroll-shockwave::-webkit-scrollbar-thumb:hover {
+	background: #0A2A3F; 
+}
+.text-verdana_shockwave {
+	font-size:11px;
+	color:#FFF;
+}
+.text-verdana_shockwave2 {
+	font-size:11px;
+	color:#000;
+}
+.home_link_shockwave {
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+}

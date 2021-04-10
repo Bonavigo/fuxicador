@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>Fuxicador Habbo - Pesquise as informações de um Habbo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="home_assets/favicon.ico" type="image/vnd.microsoft.icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="home_assets/css/home.css">
+	<script src="https://kit.fontawesome.com/5db384e8a3.js" crossorigin="anonymous"></script>
+</head>
+<body style="background:url(home_assets/images/bg/bg.png), #E3E3DB;">
+<nav class="navbar navbar-light bg-light" style="background:#BCE0EE !important;border-bottom:2px solid #000;">
+	<div class="container">
+		<div class="container-fluid" style="padding:20px;">
+			<a class="navbar-brand" href="https://login.exbrhbofc.net/">
+				<img src="https://habbofont.net/font/habbo_big/habbo.gif" class="d-inline-block align-top">
+			</a>
+		</div>
+	</div>
+</nav>
+<div class="container d-flex justify-content-center" style="margin-top:15px;margin-bottom:15px;display:block;" id="home_pesquisa">
+	<div class="row col-sm-6 justify-content-center">
+		<div class="input-group">
+			<input type="text" id="pesquisa" placeholder="Digite o usuário" class="form-control" onkeypress="verify_enter(event, this.value)">
+			<select class="form-select" id="hotel">
+				<option value=".com.br" selected>Brasil</option>
+				<option value=".com">Internacional</option>
+				<option value=".com.tr">Turquia</option>
+				<option value=".de">Alemanha</option>
+				<option value=".es">Espanha</option>
+				<option value=".fi">Finlândia</option>
+				<option value=".it">Itália</option>
+				<option value=".nl">Holanda</option>
+			</select>
+			<button class="btn btn-secondary" onclick="search(document.getElementById('pesquisa').value, document.getElementById('hotel').value)" type="button">Pesquisar</button>
+		</div>
+	</div>
+</div>
+<div class="container" style="margin-top:15px;margin-bottom:15px;" id="home_resultado">
+	<div class="row" id="home_sucesso" style="display:none;">
+		<div class="col-sm-12 card-header home-card-header">
+			<span class="text-black verdana" id="nick_usuario"></span>
+		</div>
+		<div class="col-sm-12 card-body card-home-body tema_background_verde_oliva">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 padding_box">
+						<div class="box_home gradient_exbr">
+							<div class="pixelated" id="personagem" style="float:left;width:50px;height:91px;background: url() no-repeat -8px -20px;"></div>
+							<div style="float:left;" class="verdana">
+								<div class="text-branco-verdana" style="margin-top:10px;"><strong id="home_usuario"></strong></div>
+								<div class="text-branco-verdana">Criado em: <span id="data_home_criacao"></span></div>
+								<div class="text-branco-verdana"><span id="missao_home"></span></div>
+								<div id="home_online" style="display:none;"><img class="pixelated" src="https://exbrhbofc.net/arquivos/2021/02/habbo_online.gif"></div>
+								<div id="home_offline" style="display:none;"><img class="pixelated" src="https://exbrhbofc.net/arquivos/2021/02/habbo_offline.gif"></div>
+							</div>
+							<div style="clear:both;" id="emblemas_favoritados"></div>
+						</div>
+					</div>
+					<div class="col-sm-6 padding_box">
+						<div class="box_home gradient_exbr">
+							<h5 class="text-white negrito">Emblemas (<span id="num_emblemas">?</span>)</h5>
+							<div class="gradient_exbr custom-scroll-exbr wrapper_emblemas" style="border: 2px #898989 solid;border-radius: 3px;padding: 4px;max-height: 200px;overflow: overlay;" id="lista_emblemas">
+
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 padding_box">
+						<div class="box_home gradient_exbr">
+							<h5 class="text-white negrito">Amigos (<span id="num_amigos">?</span>)</h5>
+							<div style="border: 2px #898989 solid;border-radius: 3px;overflow: overlay;" class="gradient_exbr wrapper_depo2 custom-scroll-exbr">
+								<ul class="list-group lista_p" id="lista_amigos">
+									<li class="list-group-item">Carregando...</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 padding_box">
+						<div class="box_home gradient_exbr">
+							<h5 class="text-white negrito">Quartos (<span id="num_quartos">?</span>)</h5>
+							<div style="border: 2px #898989 solid;border-radius: 3px;overflow: overlay;" class="custom-scroll-exbr wrapper_depo2 gradient_exbr">
+							<ul class="list-group lista_p" id="lista_quartos">
+								<li class="list-group-item">
+									<div class="pixelated" style="float:left;width:44px;height:47px;background: url(home_assets/images/bg/room_icon_open.gif) -3px no-repeat"></div>
+									<div style="float:left;font-size:11px;color:#000;"><strong>Carregando...</strong><br></small></div>
+									<div style="clear:both;"></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="home_erro" style="display:none;">
+		<div class="col-sm-12 box-body box-erro">
+			<div class="box-mensagem box-mensagem-erro">
+				<h5>Home não encontrada!</h5>
+			</div>
+			<p style="margin-top:5px;margin-bottom:5px;">Desculpe, mas a home que você estava procurando não existe.<br>Verifique o nick, caso mesmo assim você não conseguir, provavelmente este usuário não existe.</p>
+			<a href="javascript:void(0)" onclick="document.location.reload(false);" class="habbo-button button-habbo-white"><span>Voltar para a página inicial</span></a>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<span style="display:block;text-align:center;font-size:15px;color:#777777;" class="verdana">© 2008 - <span id="ano_footer">ano</span> <i class="fas fa-code"></i> por BrunoBonamigo</span>
+	<span style="display:block;text-align:center;font-size:15px;color:#777777;" class="verdana">Este site não possui vínculos, não é de propriedade ou operado pela Sulake Oy e não é parte do Habbo Hotel®.</span>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="home_assets/EasyAJAX.js"></script>
+<script src="home_assets/app.js"></script>
+</body>
+</html>
