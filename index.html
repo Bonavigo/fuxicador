@@ -21,7 +21,7 @@
 <div class="container d-flex justify-content-center" style="margin-top:15px;margin-bottom:15px;display:block;" id="home_pesquisa">
 	<div class="row col-sm-6 justify-content-center">
 		<div class="input-group">
-			<input type="text" id="pesquisa" placeholder="Digite o usuário" class="form-control" onkeypress="verify_enter(event, this.value)">
+			<input type="text" id="pesquisa" placeholder="Digite o usuário" class="form-control" onkeypress="verify_enter(event, this.value, document.getElementById('hotel').value)">
 			<select class="form-select" id="hotel">
 				<option value=".com.br" selected>Brasil</option>
 				<option value=".com">Internacional</option>
@@ -104,7 +104,7 @@
 	</div>
 </div>
 <div class="container">
-	<span style="display:block;text-align:center;font-size:15px;color:#777777;" class="verdana">© 2008 - <span id="ano_footer">ano</span> <i class="fas fa-code"></i> por BrunoBonamigo</span>
+	<span style="display:block;text-align:center;font-size:15px;color:#777777;" class="verdana">© 2008 - <span id="ano_footer">ano</span> <i class="fas fa-code"></i> por Bruno Bonavigo</span>
 	<span style="display:block;text-align:center;font-size:15px;color:#777777;" class="verdana">Este site não possui vínculos, não é de propriedade ou operado pela Sulake Oy e não é parte do Habbo Hotel®.</span>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
