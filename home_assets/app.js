@@ -1,8 +1,8 @@
 var ano = document.getElementById("ano_footer").innerHTML = new Date().getFullYear();
-function verify_enter(event, nick) {
+function verify_enter(event, nick, hotel) {
 	var key = event.which || event.keyCode;
 	if (key == 13) {
-		search(nick);
+		search(nick, hotel);
 	}
 }
 function motto(motto) {

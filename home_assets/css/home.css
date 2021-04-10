@@ -67,104 +67,104 @@ body::-webkit-scrollbar-thumb:hover {
 	color:inherit;
 }
 .button-habbo-green {
-	background: url(home_assets/images/green-btn/1.png) no-repeat,
-	url(home_assets/images/green-btn/2.png) no-repeat right top,
-	url(home_assets/images/green-btn/3.png) no-repeat left bottom,
-	url(home_assets/images/green-btn/4.png) no-repeat right bottom,
-	url(home_assets/images/green-btn/5.png) repeat-x,
-	url(home_assets/images/green-btn/6.png) repeat-y,
-	url(home_assets/images/green-btn/7.png) repeat-y right,
-	url(home_assets/images/green-btn/8.png) repeat-x bottom,
-	url(home_assets/images/green-btn/mid.png) #2C7E00;
+	background: url(../images/green-btn/1.png) no-repeat,
+	url(../images/green-btn/2.png) no-repeat right top,
+	url(../images/green-btn/3.png) no-repeat left bottom,
+	url(../images/green-btn/4.png) no-repeat right bottom,
+	url(../images/green-btn/5.png) repeat-x,
+	url(../images/green-btn/6.png) repeat-y,
+	url(../images/green-btn/7.png) repeat-y right,
+	url(../images/green-btn/8.png) repeat-x bottom,
+	url(../images/green-btn/mid.png) #2C7E00;
 }
 .button-habbo-green:hover {
-	background: url(home_assets/images/light-green-btn/1.png) no-repeat,
-	url(home_assets/images/light-green-btn/2.png) no-repeat right top,
-	url(home_assets/images/light-green-btn/3.png) no-repeat left bottom,
-	url(home_assets/images/light-green-btn/4.png) no-repeat right bottom,
-	url(home_assets/images/light-green-btn/5.png) repeat-x,
-	url(home_assets/images/light-green-btn/6.png) repeat-y,
-	url(home_assets/images/light-green-btn/7.png) repeat-y right,
-	url(home_assets/images/light-green-btn/8.png) repeat-x bottom,
-	url(home_assets/images/light-green-btn/mid.png) #2C7E00;
+	background: url(../images/light-green-btn/1.png) no-repeat,
+	url(../images/light-green-btn/2.png) no-repeat right top,
+	url(../images/light-green-btn/3.png) no-repeat left bottom,
+	url(../images/light-green-btn/4.png) no-repeat right bottom,
+	url(../images/light-green-btn/5.png) repeat-x,
+	url(../images/light-green-btn/6.png) repeat-y,
+	url(../images/light-green-btn/7.png) repeat-y right,
+	url(../images/light-green-btn/8.png) repeat-x bottom,
+	url(../images/light-green-btn/mid.png) #2C7E00;
 }
 .button-habbo-red {
-	background: url(home_assets/images/red-btn/1.png) no-repeat,
-	url(home_assets/images/red-btn/2.png) no-repeat right top,
-	url(home_assets/images/red-btn/3.png) no-repeat left bottom,
-	url(home_assets/images/red-btn/4.png) no-repeat right bottom,
-	url(home_assets/images/red-btn/5.png) repeat-x,
-	url(home_assets/images/red-btn/6.png) repeat-y,
-	url(home_assets/images/red-btn/7.png) repeat-y right,
-	url(home_assets/images/red-btn/8.png) repeat-x bottom,
-	url(home_assets/images/red-btn/mid.png) #D70000;
+	background: url(../images/red-btn/1.png) no-repeat,
+	url(../images/red-btn/2.png) no-repeat right top,
+	url(../images/red-btn/3.png) no-repeat left bottom,
+	url(../images/red-btn/4.png) no-repeat right bottom,
+	url(../images/red-btn/5.png) repeat-x,
+	url(../images/red-btn/6.png) repeat-y,
+	url(../images/red-btn/7.png) repeat-y right,
+	url(../images/red-btn/8.png) repeat-x bottom,
+	url(../images/red-btn/mid.png) #D70000;
 }
 .button-habbo-red:hover {
-	background: url(home_assets/images/light-red-btn/1.png) no-repeat,
-	url(home_assets/images/light-red-btn/2.png) no-repeat right top,
-	url(home_assets/images/light-red-btn/3.png) no-repeat left bottom,
-	url(home_assets/images/light-red-btn/4.png) no-repeat right bottom,
-	url(home_assets/images/light-red-btn/5.png) repeat-x,
-	url(home_assets/images/light-red-btn/6.png) repeat-y,
-	url(home_assets/images/light-red-btn/7.png) repeat-y right,
-	url(home_assets/images/light-red-btn/8.png) repeat-x bottom,
-	url(home_assets/images/light-red-btn/mid.png) #D70000;
+	background: url(../images/light-red-btn/1.png) no-repeat,
+	url(../images/light-red-btn/2.png) no-repeat right top,
+	url(../images/light-red-btn/3.png) no-repeat left bottom,
+	url(../images/light-red-btn/4.png) no-repeat right bottom,
+	url(../images/light-red-btn/5.png) repeat-x,
+	url(../images/light-red-btn/6.png) repeat-y,
+	url(../images/light-red-btn/7.png) repeat-y right,
+	url(../images/light-red-btn/8.png) repeat-x bottom,
+	url(../images/light-red-btn/mid.png) #D70000;
 }
 .button-habbo-grey {
-	background: url(home_assets/images/grey-btn/1.png) no-repeat,
-	url(home_assets/images/grey-btn/2.png) no-repeat right top,
-	url(home_assets/images/grey-btn/3.png) no-repeat left bottom,
-	url(home_assets/images/grey-btn/4.png) no-repeat right bottom,
-	url(home_assets/images/grey-btn/5.png) repeat-x,
-	url(home_assets/images/grey-btn/6.png) repeat-y,
-	url(home_assets/images/grey-btn/7.png) repeat-y right,
-	url(home_assets/images/grey-btn/8.png) repeat-x bottom,
-	url(home_assets/images/grey-btn/mid.png) #888888;
+	background: url(../images/grey-btn/1.png) no-repeat,
+	url(../images/grey-btn/2.png) no-repeat right top,
+	url(../images/grey-btn/3.png) no-repeat left bottom,
+	url(../images/grey-btn/4.png) no-repeat right bottom,
+	url(../images/grey-btn/5.png) repeat-x,
+	url(../images/grey-btn/6.png) repeat-y,
+	url(../images/grey-btn/7.png) repeat-y right,
+	url(../images/grey-btn/8.png) repeat-x bottom,
+	url(../images/grey-btn/mid.png) #888888;
 }
 .button-habbo-grey:hover {
-	background: url(home_assets/images/light-grey-btn/1.png) no-repeat,
-	url(home_assets/images/light-grey-btn/2.png) no-repeat right top,
-	url(home_assets/images/light-grey-btn/3.png) no-repeat left bottom,
-	url(home_assets/images/light-grey-btn/4.png) no-repeat right bottom,
-	url(home_assets/images/light-grey-btn/5.png) repeat-x,
-	url(home_assets/images/light-grey-btn/6.png) repeat-y,
-	url(home_assets/images/light-grey-btn/7.png) repeat-y right,
-	url(home_assets/images/light-grey-btn/8.png) repeat-x bottom,
-	url(home_assets/images/light-grey-btn/mid.png) #888888;
+	background: url(../images/light-grey-btn/1.png) no-repeat,
+	url(../images/light-grey-btn/2.png) no-repeat right top,
+	url(../images/light-grey-btn/3.png) no-repeat left bottom,
+	url(../images/light-grey-btn/4.png) no-repeat right bottom,
+	url(../images/light-grey-btn/5.png) repeat-x,
+	url(../images/light-grey-btn/6.png) repeat-y,
+	url(../images/light-grey-btn/7.png) repeat-y right,
+	url(../images/light-grey-btn/8.png) repeat-x bottom,
+	url(../images/light-grey-btn/mid.png) #888888;
 }
 .button-habbo-white {
-	background: url(home_assets/images/white-btn/1.png) no-repeat,
-	url(home_assets/images/white-btn/2.png) no-repeat right top,
-	url(home_assets/images/white-btn/3.png) no-repeat left bottom,
-	url(home_assets/images/white-btn/4.png) no-repeat right bottom,
-	url(home_assets/images/white-btn/5.png) repeat-x,
-	url(home_assets/images/white-btn/6.png) repeat-y,
-	url(home_assets/images/white-btn/7.png) repeat-y right,
-	url(home_assets/images/white-btn/8.png) repeat-x bottom,
-	url(home_assets/images/white-btn/mid.png) #EAEAEA;
+	background: url(../images/white-btn/1.png) no-repeat,
+	url(../images/white-btn/2.png) no-repeat right top,
+	url(../images/white-btn/3.png) no-repeat left bottom,
+	url(../images/white-btn/4.png) no-repeat right bottom,
+	url(../images/white-btn/5.png) repeat-x,
+	url(../images/white-btn/6.png) repeat-y,
+	url(../images/white-btn/7.png) repeat-y right,
+	url(../images/white-btn/8.png) repeat-x bottom,
+	url(../images/white-btn/mid.png) #EAEAEA;
 	color:#000 !important;
 }
 .button-habbo-white:hover {
-	background: url(home_assets/images/white2-btn/1.png) no-repeat,
-	url(home_assets/images/white2-btn/2.png) no-repeat right top,
-	url(home_assets/images/white2-btn/3.png) no-repeat left bottom,
-	url(home_assets/images/white2-btn/4.png) no-repeat right bottom,
-	url(home_assets/images/white2-btn/5.png) repeat-x,
-	url(home_assets/images/white2-btn/6.png) repeat-y,
-	url(home_assets/images/white2-btn/7.png) repeat-y right,
-	url(home_assets/images/white2-btn/8.png) repeat-x bottom,
-	url(home_assets/images/white2-btn/mid.png) #EAEAEA;
+	background: url(../images/white2-btn/1.png) no-repeat,
+	url(../images/white2-btn/2.png) no-repeat right top,
+	url(../images/white2-btn/3.png) no-repeat left bottom,
+	url(../images/white2-btn/4.png) no-repeat right bottom,
+	url(../images/white2-btn/5.png) repeat-x,
+	url(../images/white2-btn/6.png) repeat-y,
+	url(../images/white2-btn/7.png) repeat-y right,
+	url(../images/white2-btn/8.png) repeat-x bottom,
+	url(../images/white2-btn/mid.png) #EAEAEA;
 	color:#000 !important;
 }
 .box-body {
-	background: url(home_assets/images/box-error/1.png) no-repeat,
-	url(home_assets/images/box-error/2.png) no-repeat right top,
-	url(home_assets/images/box-error/3.png) no-repeat left bottom,
-	url(home_assets/images/box-error/4.png) no-repeat right bottom,
-	url(home_assets/images/box-error/5.png) repeat-x,
-	url(home_assets/images/box-error/6.png) repeat-y,
-	url(home_assets/images/box-error/7.png) repeat-y right,
-	url(home_assets/images/box-error/8.png) repeat-x bottom,
+	background: url(../images/box-error/1.png) no-repeat,
+	url(../images/box-error/2.png) no-repeat right top,
+	url(../images/box-error/3.png) no-repeat left bottom,
+	url(../images/box-error/4.png) no-repeat right bottom,
+	url(../images/box-error/5.png) repeat-x,
+	url(../images/box-error/6.png) repeat-y,
+	url(../images/box-error/7.png) repeat-y right,
+	url(../images/box-error/8.png) repeat-x bottom,
 	#FFFFFF;
 	color:#000;
 	border-top-left-radius:6px;
