@@ -83,9 +83,15 @@ function advanced_data(uniqueId, hotel) {
 			}
 			document.getElementById("lista_amigos").innerHTML = html_amigos;
 
+			let html_grupos = '';
+			for (var i = grupos.length - 1; i >= 0; i--) {
+				html_grupos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:33px;height:48px;background: url(https://www.habbo'+hotel+'/habbo-imaging/badge/'+grupos[i].badgeCode+'.gif) no-repeat 0px -9px;"></div><div style="float:left;" class="text-preto-verdana"><a href="javascript:void(0)" class="home_link_exbr">'+motto(grupos[i].name)+'</a><br><span class="break_word">'+motto(grupos[i].description)+'</span></div><div style="clear:both;"></div></li>';
+			}
+			document.getElementById("lista_grupos").innerHTML = html_grupos;
+
 			let html_quartos = '';
 			for (var i = quartos.length - 1; i >= 0; i--) {
-				html_quartos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:44px;height:47px;background: url(https://exbrhbofc.net/arquivos/2021/02/room_icon_open.gif) -3px no-repeat"></div><div style="float:left;font-size:11px;color:#000;"><strong>'+quartos[i].name+'</strong><br>'+quartos[i].description+'</small></div><div style="clear:both;"></div></li>';
+				html_quartos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:44px;height:47px;background: url(https://exbrhbofc.net/arquivos/2021/02/room_icon_open.gif) -3px no-repeat"></div><div style="float:left;font-size:11px;color:#000;"><strong>'+motto(quartos[i].name)+'</strong><br>'+motto(quartos[i].description)+'</small></div><div style="clear:both;"></div></li>';
 			}
 			document.getElementById("lista_quartos").innerHTML = html_quartos;
 
@@ -99,6 +105,8 @@ function advanced_data(uniqueId, hotel) {
 
 			let html_amigos = '<li class="list-group-item">O perfil deste Habbo é privado.</li>';
 			document.getElementById("lista_amigos").innerHTML = html_amigos;
+			let html_grupos = '<li class="list-group-item">O perfil deste Habbo é privado.</li>';
+			document.getElementById("lista_grupos").innerHTML = html_grupos;
 			let html_quartos = '<li class="list-group-item">O perfil deste Habbo é privado.</li>';
 			document.getElementById("lista_quartos").innerHTML = html_quartos;
 
