@@ -85,7 +85,7 @@ function advanced_data(uniqueId, hotel) {
 
 			let html_grupos = '';
 			for (var i = grupos.length - 1; i >= 0; i--) {
-				html_grupos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:33px;height:48px;background: url(https://www.habbo'+hotel+'/habbo-imaging/badge/'+grupos[i].badgeCode+'.gif) no-repeat 0px -9px;"></div><div style="float:left;" class="text-preto-verdana"><a href="javascript:void(0)" class="home_link_exbr">'+motto(grupos[i].name)+'</a><br><span class="break_word">'+motto(grupos[i].description)+'</span></div><div style="clear:both;"></div></li>';
+				html_grupos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:40px;height:40px;background: url(https://www.habbo'+hotel+'/habbo-imaging/badge/'+grupos[i].badgeCode+'.gif) no-repeat;"></div><div style="float:left;" class="text-preto-verdana"><a href="javascript:void(0)" class="home_link_exbr">'+motto(grupos[i].name)+'</a><br><span class="break_word">'+motto(grupos[i].description)+'</span></div><div style="clear:both;"></div></li>';
 			}
 			document.getElementById("lista_grupos").innerHTML = html_grupos;
 
@@ -97,6 +97,7 @@ function advanced_data(uniqueId, hotel) {
 
 			document.getElementById("num_emblemas").innerText = emblemas.length;
 			document.getElementById("num_amigos").innerText = amigos.length;
+			document.getElementById("num_grupos").innerText = grupos.length;
 			document.getElementById("num_quartos").innerText = quartos.length;
 		} else if (xhttp.readyState == 4 && xhttp.status !== 200) {
 			let emblemas_html = '<ul class="list-group lista_p" ><li class="list-group-item">O perfil deste Habbo é privado.</li></ul>';
