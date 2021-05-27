@@ -35,18 +35,19 @@
 <div class="container d-flex justify-content-center" style="margin-top:15px;margin-bottom:15px;display:block;" id="home_pesquisa">
 	<div class="row col-sm-6 justify-content-center">
 		<div class="input-group">
-			<input type="text" id="pesquisa" placeholder="Digite o usuário" class="form-control" onkeypress="verify_enter(event, this.value, document.getElementById('hotel').value)">
+			<input type="text" id="pesquisa" placeholder="Digite o usuário" class="form-control" onkeypress="fuxicador.verify_enter(event, this.value, document.getElementById('hotel').value)">
 			<select class="form-select" id="hotel">
 				<option value=".com.br" selected>Brasil</option>
 				<option value=".com">Internacional</option>
 				<option value=".com.tr">Turquia</option>
 				<option value=".de">Alemanha</option>
+				<option value=".fr">França</option>
 				<option value=".es">Espanha</option>
 				<option value=".fi">Finlândia</option>
 				<option value=".it">Itália</option>
 				<option value=".nl">Holanda</option>
 			</select>
-			<button class="btn btn-secondary" onclick="search(document.getElementById('pesquisa').value, document.getElementById('hotel').value)" type="button">Pesquisar</button>
+			<button class="btn btn-secondary" onclick="fuxicador.search(document.getElementById('pesquisa').value, document.getElementById('hotel').value)" type="button">Pesquisar</button>
 		</div>
 	</div>
 </div>
@@ -117,6 +118,15 @@
 			</div>
 		</div>
 	</div>
+	<div class="row" id="home_loading_verification" style="display:none;">
+		<div class="col-sm-12 box-body box-erro">
+			<div class="box-mensagem box-mensagem-erro">
+				<h5>Home não encontrada!</h5>
+			</div>
+			<p style="margin-top:5px;margin-bottom:5px;">Desculpe, mas a home que você estava procurando não existe.<br>Estamos verificando o que aconteceu com este usuário...</p>
+			<div class="spinner-border text-primary spinner_bs_center" role="status"><span class="visually-hidden">Loading...</span></div>
+		</div>
+	</div>
 	<div class="row" id="home_erro" style="display:none;">
 		<div class="col-sm-12 box-body box-erro">
 			<div class="box-mensagem box-mensagem-erro">
@@ -124,6 +134,16 @@
 			</div>
 			<p style="margin-top:5px;margin-bottom:5px;">Desculpe, mas a home que você estava procurando não existe.<br>Verifique o nick, caso mesmo assim você não conseguir, provavelmente este usuário não existe.</p>
 			<a href="javascript:void(0)" onclick="document.location.reload(false);" class="habbo-button button-habbo-white"><span>Voltar para a página inicial</span></a>
+		</div>
+	</div>
+	<div class="row" id="home_ban" style="display:none;">
+		<div class="col-sm-12 box-body box-erro">
+			<div class="box-mensagem box-mensagem-erro">
+				<h5>Home não encontrada!</h5>
+			</div>
+			<p style="margin-top:5px;margin-bottom:5px;">Desculpe, mas a home que você está procurando pertence a um usuário banido.</p>
+			<a href="javascript:void(0)" onclick="document.location.reload(false);" class="habbo-button button-habbo-white"><span>Voltar para a página inicial</span></a>
+			<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=BrunoBonamigo&direction=2&head_direction=2&size=s&action=std" class="d-none" id="ban_check">
 		</div>
 	</div>
 </div>
