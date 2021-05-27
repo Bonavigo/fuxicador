@@ -67,19 +67,19 @@ const fuxicador = {
 
 				let html_amigos = '';
 				for (var i = amigos.length - 1; i >= 0; i--) {
-					html_amigos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:33px;height:48px;background: url(https://www.habbo'+hotel+'/habbo-imaging/avatarimage?img_format=png&amp;user='+amigos[i].name+'&amp;direction=2&amp;head_direction=2&amp;size=s&amp;action=std) no-repeat 0px -9px;"></div><div style="float:left;" class="text-preto-verdana"><a href="https://www.habbo'+hotel+'/profile/'+amigos[i].name+'" class="home_link_exbr">'+amigos[i].name+'</a><br><span class="break_word">'+motto(amigos[i].motto)+'</span></div><div style="clear:both;"></div></li>';
+					html_amigos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:33px;height:48px;background: url(https://www.habbo'+hotel+'/habbo-imaging/avatarimage?img_format=png&amp;user='+amigos[i].name+'&amp;direction=2&amp;head_direction=2&amp;size=s&amp;action=std) no-repeat 0px -9px;"></div><div style="float:left;" class="text-preto-verdana"><a href="https://www.habbo'+hotel+'/profile/'+amigos[i].name+'" class="home_link_exbr">'+amigos[i].name+'</a><br><span class="break_word">'+fuxicador.motto(amigos[i].motto)+'</span></div><div style="clear:both;"></div></li>';
 				}
 				document.querySelector("#lista_amigos").innerHTML = html_amigos;
 
 				let html_grupos = '';
 				for (var i = grupos.length - 1; i >= 0; i--) {
-					html_grupos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:45px;height:40px;background: url(https://www.habbo'+hotel+'/habbo-imaging/badge/'+grupos[i].badgeCode+'.gif) no-repeat;"></div><div style="float:left;" class="text-preto-verdana"><a href="javascript:void(0)" class="home_link_exbr">'+motto(grupos[i].name)+'</a><br><span class="break_word">'+motto(grupos[i].description)+'</span></div><div style="clear:both;"></div></li>';
+					html_grupos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:45px;height:40px;background: url(https://www.habbo'+hotel+'/habbo-imaging/badge/'+grupos[i].badgeCode+'.gif) no-repeat;"></div><div style="float:left;" class="text-preto-verdana"><a href="javascript:void(0)" class="home_link_exbr">'+fuxicador.motto(grupos[i].name)+'</a><br><span class="break_word">'+fuxicador.motto(grupos[i].description)+'</span></div><div style="clear:both;"></div></li>';
 				}
 				document.querySelector("#lista_grupos").innerHTML = html_grupos;
 
 				let html_quartos = '';
 				for (var i = quartos.length - 1; i >= 0; i--) {
-					html_quartos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:44px;height:47px;background: url(https://exbrhbofc.net/arquivos/2021/02/room_icon_open.gif) -3px no-repeat"></div><div style="float:left;font-size:11px;color:#000;"><strong>'+motto(quartos[i].name)+'</strong><br>'+motto(quartos[i].description)+'</small></div><div style="clear:both;"></div></li>';
+					html_quartos += '<li class="list-group-item"><div class="pixelated" style="float:left;width:44px;height:47px;background: url(https://exbrhbofc.net/arquivos/2021/02/room_icon_open.gif) -3px no-repeat"></div><div style="float:left;font-size:11px;color:#000;"><strong>'+fuxicador.motto(quartos[i].name)+'</strong><br>'+fuxicador.motto(quartos[i].description)+'</small></div><div style="clear:both;"></div></li>';
 				}
 				document.querySelector("#lista_quartos").innerHTML = html_quartos;
 
