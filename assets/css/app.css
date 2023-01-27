@@ -1,0 +1,322 @@
+/* Refeito por Bruno Bonavigo em 2023. */
+/* Começando o ano bem! Nem parece que era porque não tinha nada para fazer... */
+
+/* Fontes e scroll */
+@font-face {
+	font-family:'Ubuntu Habbo';
+	src:url(https://images.habbo.com/habbo-web/america/pt/assets/fonts/UbuntuHabbo.2f484259.woff2) format("woff2"),
+	url(https://images.habbo.com/habbo-web/america/pt/assets/fonts/UbuntuHabbo.2af43356.woff) format("woff");
+	unicode-range:U+007C,U+2020,U+2022,U+00B6,U+00B1,U+00A5,U+00B5,U+00AA,U+00BA,U+00AC,U+0192,U+00BB,U+2014,U+2018,U+2021
+}
+
+.ubuntu {
+	font-family:'Ubuntu Habbo';
+}
+
+.verdana {
+	font-family: Verdana;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+	width: 3px;
+}
+
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #FFF; 
+	border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #BCBCB7; 
+	border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background: #BCBCB7; 
+}
+
+/* Página */
+body {
+	background:url(../img/bg.png), #E3E3DB;
+}
+
+.navbar-fuxicador {
+	background:#BCE0EE !important;border-bottom:2px solid #000;
+}
+
+.padding-logo {
+	padding: 20px;
+}
+
+.text-footer {
+	display: block;
+	font-family: Verdana;
+	text-align: center;
+	font-size: 15px;
+	color: #777777;
+}
+
+.home-card-header {
+	background: #FFF;
+	border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0 !important;
+	padding: .5rem 1rem;
+}
+
+.card-home-body {
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+/* Resultado */
+/* Sucesso */
+.tema-bg-verde-oliva {
+	background:url(../img/bg_pattern_green_exbr.png), #3F5D1F;
+}
+
+.coluna-perfil-personagem {
+	width: 50px;
+	max-width: 20%;
+}
+
+.coluna-perfil-texto {
+	width: 80%;
+	max-width: 80%;
+}
+
+.personagem {
+	image-rendering: pixelated;
+}
+
+.home-box-padding {
+	padding: 1rem 1rem;
+}
+
+.padding-entre-boxes {
+	padding-bottom:10px;
+}
+
+.gradient-verde-oliva {
+	background: linear-gradient(to bottom, rgb(55, 85, 29) 0%,#293d1e 100%);
+}
+
+.box-home {
+	height: 242px;
+	max-height: 242px;
+	border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+}
+
+.texto-titulo-caixa {
+	font-size: 1.10rem !important;
+	font-weight: 700;
+	color: #FFF;
+}
+
+.texto-info-perfil {
+	font-size: 11px;
+	color: #FFF;
+}
+
+.texto-info-nick {
+	font-weight: 700;
+}
+
+.gradient-verde-oliva::-webkit-scrollbar, .wrapper-emblemas::-webkit-scrollbar {
+	width: 3px;
+}
+.gradient-verde-oliva::-webkit-scrollbar-track, .wrapper-emblemas::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #FFF; 
+	border-radius: 10px;
+}
+.gradient-verde-oliva::-webkit-scrollbar-thumb, .wrapper-emblemas::-webkit-scrollbar-thumb {
+	background: #33691E; 
+	border-radius: 10px;
+}
+.gradient-verde-oliva::-webkit-scrollbar-thumb:hover, .wrapper-emblemas::-webkit-scrollbar-thumb:hover {
+	background: #28680E; 
+}
+
+.lista-home {
+	border-radius: 0;
+}
+
+.borda-lista {
+	height: 200px !important;
+	min-height: 200px !important;
+	max-height: 200px !important;
+	border: 2px #898989 solid;
+	border-radius: 3px;
+	max-height: 200px;
+	overflow: overlay;
+}
+
+.wrapper-emblemas {
+	padding: 4px;
+}
+
+.texto-nome-lista {
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: bolder;
+	text-decoration: none;
+	color: #000;
+	margin: 0;
+	padding-top: 0;
+}
+
+.texto-missao-lista {
+	font-family: Verdana;
+	font-size: 11px;
+	margin: 0;
+}
+
+.personagem-lista-amigos {
+	width: 33px;
+	height: 48px;
+	background: url(../img/personagem_pequeno_placeholder.png) no-repeat;
+	margin-right: 0.5em;
+	image-rendering: pixelated;
+}
+
+.imagem-grupos {
+	width: 39px;
+	height: 39px;
+	background: url(../img/grupo_placeholder.gif) no-repeat;
+	image-rendering: pixelated;
+}
+
+.imagem-quartos {
+	width: 44px;
+	height: 47px;
+	margin-right: 0.5em;
+	background: url(../img/room_icon_open.gif) -3px no-repeat;
+	image-rendering: pixelated;
+}
+
+.coluna-lista-amigos {
+	width: 20%;
+	max-width: 33px;
+	display: flex !important;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+}
+
+.coluna-lista-imagem {
+	width: 20%;
+	max-width: 39px;
+	margin-right: 0.5em;
+	display: flex !important;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+}
+
+.coluna-lista-quartos {
+	width: 20%;
+	max-width: 44px;
+	display: flex !important;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+}
+
+.coluna-lista-texto {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+}
+
+/* Erro */
+.box-body {
+	background: url(../img/box-error/1.png) no-repeat,
+	url(../img/box-error/2.png) no-repeat right top,
+	url(../img/box-error/3.png) no-repeat left bottom,
+	url(../img/box-error/4.png) no-repeat right bottom,
+	url(../img/box-error/5.png) repeat-x,
+	url(../img/box-error/6.png) repeat-y,
+	url(../img/box-error/7.png) repeat-y right,
+	url(../img/box-error/8.png) repeat-x bottom,
+	#FFFFFF;
+	color:#000;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding: 10px;
+	color: #000;
+}
+
+.box-body p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.box-mensagem-titulo {
+	border-radius: 6px;
+	padding: 5px;
+	font-family: 'Verdana' !important;
+	color: #FFF !important;
+	background: #D64242 !important;
+}
+
+.box-mensagem-titulo h5 {
+	margin: 0;
+	font-family: Verdana;
+	font-weight: 700;
+}
+
+/* Botão */
+.button-habbo {
+	background: linear-gradient(#FFFFFF 50%,#CCCCCC 50%);
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #000;
+	border-radius: 4px;
+	border: 2px solid #000;
+	padding: 2px 15px;
+	cursor: pointer;
+}
+
+.button-habbo-light-white {
+	background: linear-gradient(#FFFFFF 50%,#EAEAEA 50%);
+	color: #000;
+}
+
+.button-habbo-light-green {
+	background: linear-gradient(#45CB00 50%,#339D00 50%);
+	color: #FFF;
+}
+
+.button-habbo-green {
+	background: linear-gradient(#009c1b 50%,#008E18 50%);
+	color: #FFF;
+}
+
+.button-habbo-light-red {
+	background: linear-gradient(#FF1616 50%,#D70000 50%);
+	color: #FFF;
+}
+
+.button-habbo-red {
+	background: linear-gradient(#DE0000 50%,#B50000 50%);
+	color: #FFF;
+}
+
+.button-habbo-light-grey {
+	background: linear-gradient(#A8A8A8 50%,#7C7C7C 50%);
+	color: #FFF;
+}
+
+.button-habbo-grey {
+	background: linear-gradient(#888888 50%,#606060 50%);
+	color: #FFF;
+}

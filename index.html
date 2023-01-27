@@ -4,10 +4,10 @@
 	<title>Fuxicador Habbo - Pesquise as informações de um Habbo</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="home_assets/favicon.ico" type="image/vnd.microsoft.icon">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="home_assets/css/home.css">
-	<script src="https://kit.fontawesome.com/5db384e8a3.js" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
 	<meta name="theme-color" content="#BCE0EE">
 	<meta name="keywords" content="bruno, bonavigo, php, js, consulter, habbo, habbo hotel">
 	<meta content="@BrunoBonavigo" name="twitter:site"/>
@@ -22,138 +22,173 @@
 	<meta property="og:url" content="https://bonavigo.github.io/fuxicador"/>
 	<meta property="og:image" content="https://bonavigo.github.io/fuxicador/home_assets/ogimage.png"/>
 </head>
-<body style="background:url(home_assets/images/bg/bg.png), #E3E3DB;">
-<nav class="navbar navbar-light bg-light" style="background:#BCE0EE !important;border-bottom:2px solid #000;">
-	<div class="container">
-		<div class="container-fluid" style="padding:20px;">
-			<a class="navbar-brand" href="index.html">
-				<img src="https://habbofont.net/font/habbo_big/habbo.gif" class="d-inline-block align-top">
-			</a>
+<body class="d-flex flex-column min-vh-100">
+	<nav class="navbar navbar-light bg-light navbar-fuxicador">
+		<div class="container">
+			<div class="container-fluid padding-logo">
+				<a class="navbar-brand" href="index.html">
+					<img src="assets/img/fuxicador.gif" class="d-inline-block align-top">
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container d-flex justify-content-center mt-auto" id="home_pesquisa">
+		<div class="row col-sm-6 justify-content-center">
+			<div class="input-group">
+				<input type="text" id="pesquisa" placeholder="Digite o usuário" class="form-control" onkeypress="FUXICADOR.verify_enter(event, this.value, document.getElementById('hotel').value)">
+				<select class="form-select" id="hotel">
+					<option value=".com.br" selected>Brasil</option>
+					<option value=".com">Internacional</option>
+					<option value=".com.tr">Turquia</option>
+					<option value=".de">Alemanha</option>
+					<option value=".fr">França</option>
+					<option value=".es">Espanha</option>
+					<option value=".fi">Finlândia</option>
+					<option value=".it">Itália</option>
+					<option value=".nl">Holanda</option>
+				</select>
+				<button class="btn btn-secondary" onclick="FUXICADOR.search(document.getElementById('pesquisa').value, document.getElementById('hotel').value)" type="button">Pesquisar</button>
+			</div>
 		</div>
 	</div>
-</nav>
-<div class="container d-flex justify-content-center" style="margin-top:15px;margin-bottom:15px;display:block;" id="home_pesquisa">
-	<div class="row col-sm-6 justify-content-center">
-		<div class="input-group">
-			<input type="text" id="pesquisa" placeholder="Digite o usuário" class="form-control" onkeypress="fuxicador.verify_enter(event, this.value, document.getElementById('hotel').value)">
-			<select class="form-select" id="hotel">
-				<option value=".com.br" selected>Brasil</option>
-				<option value=".com">Internacional</option>
-				<option value=".com.tr">Turquia</option>
-				<option value=".de">Alemanha</option>
-				<option value=".fr">França</option>
-				<option value=".es">Espanha</option>
-				<option value=".fi">Finlândia</option>
-				<option value=".it">Itália</option>
-				<option value=".nl">Holanda</option>
-			</select>
-			<button class="btn btn-secondary" onclick="fuxicador.search(document.getElementById('pesquisa').value, document.getElementById('hotel').value)" type="button">Pesquisar</button>
-		</div>
-	</div>
-</div>
-<div class="container" style="margin-top:15px;margin-bottom:15px;" id="home_resultado">
-	<div class="row" id="home_sucesso" style="display:none;">
-		<div class="col-sm-12 card-header home-card-header">
-			<span class="text-black verdana" id="nick_usuario"></span>
-		</div>
-		<div class="col-sm-12 card-body card-home-body tema_background_verde_oliva">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 padding_box">
-						<div class="box_home gradient_exbr">
-							<div class="pixelated" id="personagem" style="float:left;width:50px;height:91px;background: url() no-repeat -8px -20px;"></div>
-							<div style="float:left;" class="verdana">
-								<div class="text-branco-verdana" style="margin-top:10px;"><strong id="home_usuario"></strong></div>
-								<div class="text-branco-verdana">Criado em: <span id="data_home_criacao"></span></div>
-								<div class="text-branco-verdana"><span id="missao_home"></span></div>
-								<div id="home_online" style="display:none;"><img class="pixelated" src="https://bonavigo.github.io/fuxicador/home_assets/images/page/habbo_online.gif"></div>
-								<div id="home_offline" style="display:none;"><img class="pixelated" src="https://bonavigo.github.io/fuxicador/home_assets/images/page/habbo_offline.gif"></div>
-							</div>
-							<div style="clear:both;" id="emblemas_favoritados"></div>
-						</div>
-					</div>
-					<div class="col-sm-6 padding_box">
-						<div class="box_home gradient_exbr">
-							<h5 class="text-white negrito">Emblemas (<span id="num_emblemas">?</span>)</h5>
-							<div class="gradient_exbr custom-scroll-exbr wrapper_emblemas" style="border: 2px #898989 solid;border-radius: 3px;padding: 4px;max-height: 200px;overflow: overlay;" id="lista_emblemas">
-
+	<div class="container mt-auto" id="home_resultado" style="display: none;">
+		<div class="row" id="home_sucesso" style="display: none;">
+			<div class="col-sm-12 card-header home-card-header d-flex justify-content-between">
+				<span class="verdana" id="nick_usuario_titulo">Harry</span>
+				<span onclick="document.location.reload(false);"><i class="bi bi-arrow-clockwise pointer"></i></span>
+			</div>
+			<div class="col-sm-12 card-body card-home-body tema-bg-verde-oliva">
+				<div class="container">
+					<div class="row home-box-padding">
+						<div class="col-sm-6 padding-entre-boxes">
+							<div class="box-home gradient-verde-oliva">
+								<div class="row verdana pt-2">
+									<div class="coluna-perfil-personagem">
+										<div class="personagem" id="personagem" style="width:50px;height:91px;background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?user=BrunoBonamigo&action=std&direction=2&head_direction=2&gesture=std&size=b) no-repeat -8px -20px;"></div>
+									</div>
+									<div class="coluna-perfil-texto">
+										<div class="pt-2">
+											<div class="texto-info-perfil texto-info-nick" id="nick_usuario">Harry</div>
+											<div class="texto-info-perfil">Criado em: <span id="data_home_criacao">02/02/2006</span></div>
+											<div class="texto-info-perfil"><span id="missao_home">crikey</span></div>
+											<div id="home_online" style="display: none;"><img class="pixelated" src="assets/img/habbo_online.gif"></div>
+											<div id="home_offline" style="display: none;"><img class="pixelated" src="assets/img/habbo_offline.gif"></div>
+										</div>
+									</div>
+								</div>
+								<div class="pt-2" id="emblemas_favoritados">
+									<img src="assets/img/emblemas_placeholder.png" class="emblemas pixelated" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Carregando...">
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-sm-4 padding_box">
-						<div class="box_home gradient_exbr">
-							<h5 class="text-white negrito">Amigos (<span id="num_amigos">?</span>)</h5>
-							<div style="border: 2px #898989 solid;border-radius: 3px;overflow: overlay;" class="gradient_exbr wrapper_depo2 custom-scroll-exbr">
-								<ul class="list-group lista_p" id="lista_amigos">
-									<li class="list-group-item">Carregando...</li>
-								</ul>
+						<div class="col-sm-6 padding-entre-boxes">
+							<div class="box-home gradient-verde-oliva">
+								<h5 class="texto-titulo-caixa">Emblemas (<span id="num_emblemas">?</span>)</h5>
+								<div class="borda-lista wrapper-emblemas gradient-verde-oliva" id="lista_emblemas">
+									<img src="assets/img/emblemas_placeholder.png" class="emblemas pixelated" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Carregando...">
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-sm-4 padding_box">
-						<div class="box_home gradient_exbr">
-							<h5 class="text-white negrito">Grupos (<span id="num_grupos">?</span>)</h5>
-							<div style="border: 2px #898989 solid;border-radius: 3px;overflow: overlay;" class="gradient_exbr wrapper_depo2 custom-scroll-exbr">
-								<ul class="list-group lista_p" id="lista_grupos">
-									<li class="list-group-item">Carregando...</li>
-								</ul>
+						<div class="col-sm-4 padding-entre-boxes">
+							<div class="box-home gradient-verde-oliva">
+								<h5 class="texto-titulo-caixa">Amigos (<span id="num_amigos">?</span>)</h5>
+								<div class="borda-lista gradient-verde-oliva">
+									<ul class="list-group lista-home" id="lista_amigos">
+										<li class="list-group-item">
+											<div class="d-flex">
+												<div class="coluna-lista-amigos">
+													<div class="personagem-lista-amigos" style="background: url(https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=BrunoBonamigo&direction=2&head_direction=2&size=s&action=std) no-repeat 0px -9px;"></div>
+												</div>
+												<div class="coluna-lista-texto">
+													<p class="texto-nome-lista">Carregando...</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-sm-4 padding_box">
-						<div class="box_home gradient_exbr">
-							<h5 class="text-white negrito">Quartos (<span id="num_quartos">?</span>)</h5>
-							<div style="border: 2px #898989 solid;border-radius: 3px;overflow: overlay;" class="custom-scroll-exbr wrapper_depo2 gradient_exbr">
-							<ul class="list-group lista_p" id="lista_quartos">
-								<li class="list-group-item">
-									<div class="pixelated" style="float:left;width:44px;height:47px;background: url(home_assets/images/bg/room_icon_open.gif) -3px no-repeat"></div>
-									<div style="float:left;font-size:11px;color:#000;"><strong>Carregando...</strong><br></small></div>
-									<div style="clear:both;"></div>
-								</li>
-							</ul>
+						<div class="col-sm-4 padding-entre-boxes">
+							<div class="box-home gradient-verde-oliva">
+								<h5 class="texto-titulo-caixa">Grupos (<span id="num_grupos">?</span>)</h5>
+								<div class="borda-lista gradient-verde-oliva">
+									<ul class="list-group lista-home" id="lista_grupos">
+										<li class="list-group-item">
+											<div class="d-flex">
+												<div class="coluna-lista-imagem">
+													<div class="imagem-grupos"></div>
+												</div>
+												<div class="coluna-lista-texto">
+													<p class="texto-nome-lista">Carregando...</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-					</div>
+						<div class="col-sm-4 padding-entre-boxes">
+							<div class="box-home gradient-verde-oliva">
+								<h5 class="texto-titulo-caixa">Quartos (<span id="num_quartos">?</span>)</h5>
+								<div class="borda-lista gradient-verde-oliva ">
+									<ul class="list-group lista-home" id="lista_quartos">
+										<li class="list-group-item">
+											<div class="d-flex">
+												<div class="coluna-lista-imagem">
+													<div class="imagem-quartos"></div>
+												</div>
+												<div class="coluna-lista-texto">
+													<p class="texto-nome-lista">Carregando...</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row" id="home_loading_verification" style="display:none;">
-		<div class="col-sm-12 box-body box-erro">
-			<div class="box-mensagem box-mensagem-erro">
-				<h5>Home não encontrada!</h5>
+		<div class="row" id="home_loading_verification" style="display:none;">
+			<div class="col-sm-12 box-body">
+				<div class="box-mensagem-titulo">
+					<h5>Home não encontrada!</h5>
+				</div>
+				<p>Desculpe, o personagem que você estava procurando não existe.<br>Estamos verificando o que aconteceu com este usuário...</p>
+				<div class="d-flex justify-content-center">
+					<img class="my-3" src="assets/img/progress_bubbles.gif">
+				</div>
 			</div>
-			<p style="margin-top:5px;margin-bottom:5px;">Desculpe, mas a home que você estava procurando não existe.<br>Estamos verificando o que aconteceu com este usuário...</p>
-			<div class="spinner-border text-primary spinner_bs_center" role="status"><span class="visually-hidden">Loading...</span></div>
+		</div>
+		<div class="row" id="home_erro" style="display:none;">
+			<div class="col-sm-12 box-body">
+				<div class="box-mensagem-titulo">
+					<h5>Home não encontrada!</h5>
+				</div>
+				<p>Desculpe, o personagem que você estava procurando não existe. Verifique o nome.</p>
+				<div class="d-flex justify-content-center">
+					<a href="javascript:void(0)" onclick="document.location.reload(false);" class="button-habbo my-2">Voltar para a página inicial</a>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="home_ban" style="display:none;">
+			<div class="col-sm-12 box-body">
+				<div class="box-mensagem-titulo">
+					<h5>Home não encontrada!</h5>
+				</div>
+				<p>Desculpe, o usuário que você está procurando pertence foi banido.</p>
+				<a href="javascript:void(0)" onclick="document.location.reload(false);" class="button-habbo my-2">Voltar para a página inicial</a>
+				<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=BrunoBonamigo&direction=2&head_direction=2&size=s&action=std" class="d-none" id="ban_check">
+			</div>
 		</div>
 	</div>
-	<div class="row" id="home_erro" style="display:none;">
-		<div class="col-sm-12 box-body box-erro">
-			<div class="box-mensagem box-mensagem-erro">
-				<h5>Home não encontrada!</h5>
-			</div>
-			<p style="margin-top:5px;margin-bottom:5px;">Desculpe, mas a home que você estava procurando não existe.<br>Verifique o nick, caso mesmo assim você não conseguir, provavelmente este usuário não existe.</p>
-			<a href="javascript:void(0)" onclick="document.location.reload(false);" class="habbo-button button-habbo-white"><span>Voltar para a página inicial</span></a>
-		</div>
+	<div class="container mb-5 mt-auto">
+		<span class="text-footer">© <span id="ano_footer">20XX</span> <i class="bi bi-code-slash"></i> por Bruno Bonavigo</span>
+		<span class="text-footer">Este site não possui vínculos, não é de propriedade ou operado pela Sulake Oy e não é parte do Habbo Hotel®.</span>
 	</div>
-	<div class="row" id="home_ban" style="display:none;">
-		<div class="col-sm-12 box-body box-erro">
-			<div class="box-mensagem box-mensagem-erro">
-				<h5>Home não encontrada!</h5>
-			</div>
-			<p style="margin-top:5px;margin-bottom:5px;">Desculpe, mas a home que você está procurando pertence a um usuário banido.</p>
-			<a href="javascript:void(0)" onclick="document.location.reload(false);" class="habbo-button button-habbo-white"><span>Voltar para a página inicial</span></a>
-			<img src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=BrunoBonamigo&direction=2&head_direction=2&size=s&action=std" class="d-none" id="ban_check">
-		</div>
-	</div>
-</div>
-<div class="container">
-	<span style="display:block;text-align:center;font-size:15px;color:#777777;" class="verdana">© <span id="ano_footer">ano</span> <i class="fas fa-code"></i> por Bruno Bonavigo</span>
-	<span style="display:block;text-align:center;font-size:15px;color:#777777;" class="verdana">Este site não possui vínculos, não é de propriedade ou operado pela Sulake Oy e não é parte do Habbo Hotel®.</span>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-<script src="home_assets/EasyAJAX.js"></script>
-<script src="home_assets/app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script src="assets/js/EasyAJAX.js"></script>
+	<script src="assets/js/app.js"></script>
 </body>
 </html>
