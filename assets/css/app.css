@@ -89,6 +89,9 @@ body {
 
 .personagem {
 	image-rendering: pixelated;
+	width: 50px;
+	height: 91px;
+	background: url(assets/img/personagem_medio_placeholder.png) no-repeat -8px -20px;
 }
 
 .home-box-padding {
@@ -177,7 +180,7 @@ body {
 .personagem-lista-amigos {
 	width: 33px;
 	height: 48px;
-	background: url(../img/personagem_pequeno_placeholder.png) no-repeat;
+	background: url(../img/personagem_pequeno_placeholder.png) 0px -9px no-repeat;
 	margin-right: 0.5em;
 	image-rendering: pixelated;
 }
