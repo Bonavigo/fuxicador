@@ -55,7 +55,7 @@ const FUXICADOR = {
 		var error = function error() {
 			document.querySelector("#home_pesquisa").setAttribute('style', 'display:none !important;');
 			document.querySelector("#home_resultado").style.display = 'block';
-			document.querySelector("#home_loading_verification").style.display = 'block';
+			document.querySelector("#home_loading_verification").style.display = 'flex';
 			document.querySelector("#ban_check").setAttribute('src', 'http://www.habbo'+hotel+'/habbo-imaging/avatarimage?user='+nick+'&action=std&direction=2&head_direction=2&gesture=std&size=b)');
 			document.querySelector("#ban_check").setAttribute('onerror', 'FUXICADOR.userNotFound()');
 			document.querySelector("#ban_check").setAttribute('onload', 'FUXICADOR.userBanned()');
