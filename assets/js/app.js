@@ -169,8 +169,8 @@ const FUXICADOR = {
 	},
 	userBanned() {
 		document.querySelector("#home_loading_verification").style.display = 'none';
-		document.querySelector("#home_ban").style.display = 'block';
-		document.querySelector("#home_erro").style.display = 'flex';
+		document.querySelector("#home_ban").style.display = 'flex';
+		document.querySelector("#home_erro").style.display = 'none';
 	},
 	emojis(string) {
 		string = string.replaceAll("†", '<span class="ubuntu">†</span>');
