@@ -1,8 +1,8 @@
 # Fuxicador
-Um simples consultador da Habbo API no estilo das Habbo Homes, usando de base outro projeto meu, <a href="https://login.bopehabbo.net/home/BrunoBonamigo">as BR Homes.</a>
+Um simples consultador da Habbo API no estilo das Habbo Homes, usando de base outro projeto meu, <a href="https://login.exalhb.com/home/Bona">as BR Homes.</a>
 
 
-A simple consulter of the Habbo API in the style of the Habbo Homes, based in other project made by me, <a href="https://login.bopehabbo.net/home/BrunoBonamigo">the BR Homes</a>.
+A simple consulter of the Habbo API in the style of the Habbo Homes, based in other project made by me, <a href="https://login.exalhb.com/home/Bona">the BR Homes</a>.
 
 
 Curiosamente, meu nome foi removido de várias áreas do site original, entretanto, em alguns não, como as homes e alguns arquivos .css. Curioso...
