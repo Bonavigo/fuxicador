@@ -9,6 +9,16 @@
 	unicode-range:U+007C,U+2020,U+2022,U+00B6,U+00B1,U+00A5,U+00B5,U+00AA,U+00BA,U+00AC,U+0192,U+00BB,U+2014,U+2018,U+2021
 }
 
+@media (max-width: 575px) {
+	#home_sucesso, #home_loading_verification, #home_erro, #home_ban {
+		margin-top: 3em !important;
+	}
+
+	.caixa-footer {
+		padding-top: 3em;
+	}
+}
+
 .ubuntu {
 	font-family:'Ubuntu Habbo';
 }
