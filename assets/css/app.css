@@ -246,6 +246,10 @@ body {
 	justify-content: center;
 }
 
+.lista_p .list-group-item {
+	border-radius: 0;
+}
+
 /* Erro */
 .box-body {
 	background: url(../img/box-error/1.png) no-repeat,
