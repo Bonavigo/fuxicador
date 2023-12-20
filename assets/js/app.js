@@ -37,6 +37,18 @@ const FUXICADOR = {
 			date = split[0];
 			document.querySelector("#data_home_criacao").innerText = date;
 
+			if (response.lastAccessTime) {
+				let timestamp = Date.parse(response.lastAccessTime);
+				let date = new Date(timestamp);
+				date = date.toLocaleString();
+				var split = date.split(" ");
+				var split = date.split(",");
+				date = split[0];
+				document.querySelector("#data_home_ultimo_login").innerText = date;
+			} else {
+				document.querySelector("#ultimo_login_div").style.display = 'none';
+			}
+
 			document.querySelector("#missao_home").innerHTML = FUXICADOR.emojis(response.motto);
 
 			if (response.online === true) {
