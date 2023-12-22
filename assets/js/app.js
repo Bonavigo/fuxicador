@@ -117,7 +117,7 @@ const FUXICADOR = {
 					<li class="list-group-item">
 						<div class="d-flex">
 							<div class="coluna-lista-imagem">
-								<div class="imagem-grupos" style="background: url(https://www.habbo${hotel}/habbo-imaging/badge/${grupos[i].badgeCode}.gif), no-repeat;"></div>
+								<img class="imagem-grupos" src="https://www.habbo${hotel}/habbo-imaging/badge/${grupos[i].badgeCode}.png">
 							</div>
 							<div class="coluna-lista-texto">
 								<a href="https://www.habbo${hotel}/hotel?room=${grupos[i].roomId}" target="_blank" class="texto-nome-lista">${FUXICADOR.emojis(grupos[i].name)}</a>
